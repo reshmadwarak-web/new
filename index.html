@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Alex Rivera - Creative Developer & AI Engineer Portfolio. Building premium, intelligent, and interactive web experiences.">
+  <title>Alex Rivera | Creative Developer & AI Engineer</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Background Cybernetic Grid & Glows -->
+  <div class="cyber-bg">
+    <div class="glow-orb orb-1"></div>
+    <div class="glow-orb orb-2"></div>
+    <div class="glow-orb orb-3"></div>
+    <div class="grid-lines"></div>
+  </div>
+
+  <!-- Cursor Follower (Interactive Glow) -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+  <!-- Header / Navigation -->
+  <header class="header">
+    <div class="nav-container">
+      <a href="#" class="logo">
+        <span class="logo-accent">&lt;</span>AETHER<span class="logo-accent"> /&gt;</span>
+      </a>
+      
+      <nav class="nav-menu" id="nav-menu">
+        <a href="#home" class="nav-link active" data-section="home">Home</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        <a href="https://github.com" target="_blank" class="nav-btn">
+          <span>Resume</span>
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </nav>
+      
+      <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge">
+            <span class="badge-dot"></span>
+            <span>Available for new projects</span>
+          </div>
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Alex Rivera</span>
+          </h1>
+          <h2 class="hero-subtitle">
+            I craft <span id="typewriter"></span><span class="cursor">|</span>
+          </h2>
+          <p class="hero-description">
+            A creative developer and AI engineer dedicated to building high-performance, immersive, and visually stunning digital products. Merging clean architecture with artistic design.
+          </p>
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>View Projects</span>
+              <i data-lucide="layout-grid"></i>
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+              <i data-lucide="send"></i>
+            </a>
+          </div>
+          <div class="social-links">
+            <a href="https://github.com" target="_blank" aria-label="GitHub"><i data-lucide="github"></i></a>
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+            <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="mailto:alex@example.com" aria-label="Email"><i data-lucide="mail"></i></a>
+          </div>
+        </div>
+        
+        <div class="hero-visual">
+          <!-- Interactive Terminal Emulator -->
+          <div class="terminal-box glass-panel">
+            <div class="terminal-header">
+              <div class="terminal-dots">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+              </div>
+              <span class="terminal-title">developer@aether-os:~</span>
+              <span class="terminal-icon"><i data-lucide="terminal"></i></span>
+            </div>
+            <div class="terminal-body" id="terminal-body">
+              <div class="terminal-row"><span class="terminal-prompt">~</span> <span class="terminal-command">whoami</span></div>
+              <div class="terminal-row terminal-output">Alex Rivera | Creative Dev & AI Architect</div>
+              <div class="terminal-row"><span class="terminal-prompt">~</span> <span class="terminal-command">cat skills.json</span></div>
+              <div class="terminal-row terminal-output">
+<pre>{
+  "frontend": ["React", "Next.js", "Three.js", "WebGL"],
+  "backend": ["Node.js", "Python", "FastAPI", "Postgres"],
+  "ai_ml": ["PyTorch", "LangChain", "LLMs", "RAG"]
+}</pre>
+              </div>
+              <div class="terminal-row"><span class="terminal-prompt">~</span> <span class="terminal-command">npm run initialize-ideas</span></div>
+              <div class="terminal-row terminal-output text-success">✔ Core system loaded. Ready to build something epic...</div>
+              <div class="terminal-row"><span class="terminal-prompt">~</span> <span class="terminal-cursor">█</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">My Journey</span>
+          <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">A timeline of my growth, projects, and roles in the tech industry.</p>
+        </div>
+        
+        <div class="timeline">
+          <div class="timeline-line"></div>
+          
+          <!-- Experience Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel hover-glow">
+              <div class="timeline-date">2024 - Present</div>
+              <h3 class="timeline-role">Lead Creative Engineer</h3>
+              <h4 class="timeline-company">Aether Labs</h4>
+              <p class="timeline-desc">Leading frontend development of generative AI tools, creating custom 3D web visualizations with WebGL/Three.js, and scaling client-side performance by 40%.</p>
+              <div class="timeline-tags">
+                <span class="tag">React</span>
+                <span class="tag">Three.js</span>
+                <span class="tag">TypeScript</span>
+                <span class="tag">WebGL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel hover-glow">
+              <div class="timeline-date">2022 - 2024</div>
+              <h3 class="timeline-role">Full Stack AI Developer</h3>
+              <h4 class="timeline-company">Nexus Tech</h4>
+              <p class="timeline-desc">Developed and deployed LLM-powered applications using FastAPI, LangChain, and React. Optimized search algorithms using vector databases for enterprise document intelligence.</p>
+              <div class="timeline-tags">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">LangChain</span>
+                <span class="tag">PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Experience Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card glass-panel hover-glow">
+              <div class="timeline-date">2020 - 2022</div>
+              <h3 class="timeline-role">Software Developer</h3>
+              <h4 class="timeline-company">Quantum Studio</h4>
+              <p class="timeline-desc">Built highly interactive responsive e-commerce web applications. Maintained custom component libraries and established automated CI/CD deployment pipelines.</p>
+              <div class="timeline-tags">
+                <span class="tag">Next.js</span>
+                <span class="tag">Node.js</span>
+                <span class="tag">CSS Grid</span>
+                <span class="tag">Docker</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Featured Work</span>
+          <h2 class="section-title">Selected <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Explore a handpicked showcase of my latest creations combining design elegance and complex logic.</p>
+        </div>
+        
+        <div class="projects-grid">
+          
+          <!-- Project 1: Aether AI -->
+          <div class="project-card glass-panel hover-glow">
+            <div class="project-preview">
+              <!-- Interactive Live UI: Neural Machine Learning Visualization -->
+              <div class="preview-mockup neural-net-mockup">
+                <div class="neural-node node-1"></div>
+                <div class="neural-node node-2"></div>
+                <div class="neural-node node-3"></div>
+                <div class="neural-node node-4"></div>
+                <svg class="neural-connections" width="100%" height="100%">
+                  <line class="conn-1" x1="20%" y1="30%" x2="50%" y2="20%"></line>
+                  <line class="conn-2" x1="50%" y1="20%" x2="80%" y2="40%"></line>
+                  <line class="conn-3" x1="20%" y1="30%" x2="40%" y2="70%"></line>
+                  <line class="conn-4" x1="40%" y1="70%" x2="80%" y2="40%"></line>
+                  <line class="conn-5" x1="50%" y1="20%" x2="40%" y2="70%"></line>
+                </svg>
+                <div class="neural-panel glass-panel">
+                  <div class="p-header">Aether Node Active</div>
+                  <div class="p-metric"><span class="pulse-dot"></span> Loss: 0.0421</div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">AetherAI</h3>
+              <p class="project-desc">An interactive neural network visualization dashboard displaying real-time agent parameters, weights adjustment, and custom training metrics.</p>
+              <div class="project-tags">
+                <span class="project-tag-pill">React</span>
+                <span class="project-tag-pill">D3.js</span>
+                <span class="project-tag-pill">PyTorch</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub Repository"><i data-lucide="github"></i> Repository</a>
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="Live Demo"><i data-lucide="external-link"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Helios DeFi -->
+          <div class="project-card glass-panel hover-glow">
+            <div class="project-preview">
+              <!-- Interactive Live UI: Dex Swap Card -->
+              <div class="preview-mockup swap-mockup">
+                <div class="swap-card glass-panel">
+                  <div class="swap-header">
+                    <span>Swap Token</span>
+                    <i data-lucide="settings" class="icon-small"></i>
+                  </div>
+                  <div class="swap-input-box">
+                    <span class="token-name">ETH</span>
+                    <span class="token-val">1.25</span>
+                  </div>
+                  <div class="swap-divider">
+                    <div class="swap-arrow"><i data-lucide="arrow-down" class="icon-small"></i></div>
+                  </div>
+                  <div class="swap-input-box">
+                    <span class="token-name">AETH</span>
+                    <span class="token-val">3,842.12</span>
+                  </div>
+                  <button class="swap-btn-mock">Execute Swap</button>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Helios DeFi</h3>
+              <p class="project-desc">A beautiful Web3 decentralized exchange dashboard featuring real-time price swaps, pool statistics, and integrated MetaMask wallet authentication.</p>
+              <div class="project-tags">
+                <span class="project-tag-pill">Next.js</span>
+                <span class="project-tag-pill">Ethers.js</span>
+                <span class="project-tag-pill">Solidity</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub Repository"><i data-lucide="github"></i> Repository</a>
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="Live Demo"><i data-lucide="external-link"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Zenith Docs -->
+          <div class="project-card glass-panel hover-glow">
+            <div class="project-preview">
+              <!-- Interactive Live UI: Workspace Editor -->
+              <div class="preview-mockup workspace-mockup">
+                <div class="workspace-sidebar">
+                  <div class="ws-item active"></div>
+                  <div class="ws-item"></div>
+                  <div class="ws-item"></div>
+                </div>
+                <div class="workspace-editor">
+                  <div class="ws-title-bar">
+                    <span class="ws-dot-menu"></span>
+                    <span class="ws-title-text">README.md</span>
+                  </div>
+                  <div class="ws-content-area">
+                    <p class="ws-text-line"># Aether Project</p>
+                    <p class="ws-text-line">Deploying application to host...</p>
+                    <div class="ws-cursor-line">
+                      <span class="ws-text-line-active">npm run deploy</span>
+                      <span class="ws-cursor-blink">|</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <h3 class="project-title">Zenith Docs</h3>
+              <p class="project-desc">A minimalist markdown-focused collaborative documentation workspace with live rendering, custom themes, and full cloud syncing capabilities.</p>
+              <div class="project-tags">
+                <span class="project-tag-pill">TypeScript</span>
+                <span class="project-tag-pill">React</span>
+                <span class="project-tag-pill">SupaBase</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="GitHub Repository"><i data-lucide="github"></i> Repository</a>
+                <a href="https://github.com" target="_blank" class="project-link" aria-label="Live Demo"><i data-lucide="external-link"></i> Live Demo</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tech Stack</span>
+          <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+          <p class="section-subtitle">The tools and frameworks I use to transform ambitious concepts into digital reality.</p>
+        </div>
+        
+        <div class="skills-grid">
+          <!-- Skill Category 1 -->
+          <div class="skill-category glass-panel hover-glow">
+            <div class="skill-cat-header">
+              <i data-lucide="monitor"></i>
+              <h3>Frontend</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>React / Next.js</span><span>95%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>TypeScript</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>CSS / WebGL / Three.js</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 2 -->
+          <div class="skill-category glass-panel hover-glow">
+            <div class="skill-cat-header">
+              <i data-lucide="server"></i>
+              <h3>Backend</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>Node.js / Express</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Python / FastAPI</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>SQL / Postgres / NoSQL</span><span>80%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Skill Category 3 -->
+          <div class="skill-category glass-panel hover-glow">
+            <div class="skill-cat-header">
+              <i data-lucide="brain"></i>
+              <h3>AI & Intelligence</h3>
+            </div>
+            <div class="skill-list">
+              <div class="skill-item">
+                <div class="skill-info"><span>LLMs & Agent Integration</span><span>90%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>LangChain & Vector DBs</span><span>85%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+              </div>
+              <div class="skill-item">
+                <div class="skill-info"><span>Machine Learning (PyTorch)</span><span>70%</span></div>
+                <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Let's Connect</span>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in collaborating or just want to chat? Drop me a message.</p>
+        </div>
+        
+        <div class="contact-grid">
+          <div class="contact-info glass-panel">
+            <h3>Start a Conversation</h3>
+            <p>I'm always excited about new opportunities, innovative designs, and challenging technical tasks.</p>
+            
+            <div class="info-list">
+              <div class="info-item">
+                <div class="info-icon"><i data-lucide="mail"></i></div>
+                <div class="info-text">
+                  <span>Email Me</span>
+                  <a href="mailto:alex@example.com">alex@aether.dev</a>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i data-lucide="map-pin"></i></div>
+                <div class="info-text">
+                  <span>Location</span>
+                  <span>San Francisco, CA (Open to Remote)</span>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i data-lucide="clock"></i></div>
+                <div class="info-text">
+                  <span>Response Time</span>
+                  <span>Typically within 24 hours</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="contact-form-container glass-panel">
+            <form id="contact-form" class="contact-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required placeholder="Collaboration Idea">
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required rows="5" placeholder="Let's build something creative..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                <span>Send Message</span>
+                <i data-lucide="arrow-right"></i>
+              </button>
+              <div id="form-feedback" class="form-feedback hidden"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <p class="footer-copy">&copy; 2026 Alex Rivera. Built with precision and creativity.</p>
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Custom JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
